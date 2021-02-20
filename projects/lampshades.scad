@@ -3,86 +3,83 @@ use <../modules/sinewave_cylinder.scad>
 base_diameter = 42;
 shade_diameter = base_diameter + 34;
 
-// defaults:
-/* boundary(height = 20, diameter = 10, period = 1, amplitude = 0) */
-
 boundaries_j = [
   boundary(height = 15, diameter = base_diameter),
   boundary(height = 22, diameter = base_diameter),
-  boundary(height = 22, diameter = shade_diameter, period = 11, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter + 10, period = 3, amplitude = 8),
-  boundary(height = 22, diameter = shade_diameter, period = 19, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter, period = 78, amplitude = 2),
+  boundary(height = 22, diameter = shade_diameter, cycles = 11, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter + 10, cycles = 3, amplitude = 8),
+  boundary(height = 22, diameter = shade_diameter, cycles = 19, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 78, amplitude = 2),
   boundary(diameter = base_diameter + 15),
 ];
 
 boundaries_w= [
   boundary(height = 15, diameter = base_diameter),
   boundary(height = 22, diameter = base_diameter),
-  boundary(height = 22, diameter = shade_diameter, period = 3, amplitude = 8),
-  boundary(height = 22, diameter = shade_diameter + 10, period = 27, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter, period = 19, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter, period = 83, amplitude = 2),
+  boundary(height = 22, diameter = shade_diameter, cycles = 3, amplitude = 8),
+  boundary(height = 22, diameter = shade_diameter + 10, cycles = 27, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 19, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 83, amplitude = 2),
   boundary(diameter = base_diameter + 15),
 ];
 
 boundaries_i= [
   boundary(height = 15, diameter = base_diameter),
   boundary(height = 22, diameter = base_diameter),
-  boundary(height = 22, diameter = shade_diameter, period = 11, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter + 10, period = 27, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter, period = 20, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter, period = 3, amplitude = 8),
+  boundary(height = 22, diameter = shade_diameter, cycles = 11, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter + 10, cycles = 27, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 20, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 3, amplitude = 8),
   boundary(diameter = base_diameter + 15),
 ];
 
 boundaries_e= [
   boundary(height = 15, diameter = base_diameter),
   boundary(height = 22, diameter = base_diameter),
-  boundary(height = 22, diameter = shade_diameter, period = 1, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter + 10, period = 4, amplitude = 8),
-  boundary(height = 22, diameter = shade_diameter, period = 20, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter, period = 7, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 1, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter + 10, cycles = 4, amplitude = 8),
+  boundary(height = 22, diameter = shade_diameter, cycles = 20, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 7, amplitude = 4),
   boundary(diameter = base_diameter + 15),
 ];
 
 boundaries_fm = [
   boundary(height = 15, diameter = base_diameter),
   boundary(height = 22, diameter = base_diameter),
-  boundary(height = 22, diameter = shade_diameter, period = 11, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter + 10, period = 18, amplitude = 8),
-  boundary(height = 22, diameter = shade_diameter, period = 20, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter, period = 13, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 11, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter + 10, cycles = 18, amplitude = 8),
+  boundary(height = 22, diameter = shade_diameter, cycles = 20, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 13, amplitude = 4),
   boundary(diameter = base_diameter + 15),
 ];
 
 boundaries_fd = [
   boundary(height = 15, diameter = base_diameter),
   boundary(height = 22, diameter = base_diameter),
-  boundary(height = 22, diameter = shade_diameter, period = 1, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter + 10, period = 9, amplitude = 8),
-  boundary(height = 22, diameter = shade_diameter, period = 20, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter, period = 16, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 1, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter + 10, cycles = 9, amplitude = 8),
+  boundary(height = 22, diameter = shade_diameter, cycles = 20, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 16, amplitude = 4),
   boundary(diameter = base_diameter + 15),
 ];
 
 boundaries_gs = [
   boundary(height = 15, diameter = base_diameter),
   boundary(height = 22, diameter = base_diameter),
-  boundary(height = 22, diameter = shade_diameter, period = 3, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter + 10, period = 5, amplitude = 8),
-  boundary(height = 22, diameter = shade_diameter, period = 20, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter, period = 16, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 3, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter + 10, cycles = 5, amplitude = 8),
+  boundary(height = 22, diameter = shade_diameter, cycles = 20, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 16, amplitude = 4),
   boundary(diameter = base_diameter + 15),
 ];
 
 boundaries_gm = [
   boundary(height = 15, diameter = base_diameter),
   boundary(height = 22, diameter = base_diameter),
-  boundary(height = 22, diameter = shade_diameter, period = 10, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter + 10, period = 18, amplitude = 8),
-  boundary(height = 22, diameter = shade_diameter, period = 20, amplitude = 4),
-  boundary(height = 22, diameter = shade_diameter, period = 18, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 10, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter + 10, cycles = 18, amplitude = 8),
+  boundary(height = 22, diameter = shade_diameter, cycles = 20, amplitude = 4),
+  boundary(height = 22, diameter = shade_diameter, cycles = 18, amplitude = 4),
   boundary(diameter = base_diameter + 15),
 ];
 
