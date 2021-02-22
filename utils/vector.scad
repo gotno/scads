@@ -22,3 +22,12 @@ function vec_set(vector, key, value) =
     index == []
       ? concat(vector, [[key, value]])
       : [for(i=[0:len(vector) - 1]) i == index ? [key, value] : vector[i]];
+
+function map(vector, f) =
+  [for(i=[0:len(vector) - 1]) f(vector[i])];
+
+function reduce(vector, accumulator, f, index) =
+  let(index = index == undef ? 0 : index)
+    index > len(vector) - 1
+      ? accumulator
+      : reduce(vector, f(accumulator, vector[index]), f, index + 1);
