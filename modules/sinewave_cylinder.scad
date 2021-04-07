@@ -32,6 +32,7 @@ module sinewave_cylinder(boundary_attributes, detail_level = 1) {
         ? z_offset
         : current_z_offset(boundaries, boundary_index - 1, z_offset + boundary_height);
 
+  // build boundaries
   boundaries = 
     [for(i=[0:len(boundary_attributes) - 1]) [
       ["height", vec_fetch(boundary_attributes[i], "height")],
@@ -67,7 +68,7 @@ function boundary(height = 1, diameter = 1, cycles = 1, amplitude = 0, phase_shi
     ["phase_shift", phase_shift_degrees]
   ];
 
-// returns a vector of vec2s defining the points in a boundary polygon
+// returns a vector of vec2s defining the [x,y] points in a boundary polygon
 function generate_boundary_polygon_points(radius, cycles, amplitude, phase_shift, detail_level) =
   let(
     detail_levels = [0.5, 1, 2, 4, 5, 6, 9, 10, 12, 18, 20],

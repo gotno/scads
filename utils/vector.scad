@@ -9,7 +9,8 @@ function vec_fetch(vector, key, default) =
     index = search([key], vector, num_returns_per_match = 1, index_col_num = 0)[0],
     value = vector[index][1]
   )
-    value == undef ? default : value;
+
+  value == undef ? default : value;
 
 // vec_set
 // returns a copy of the vector with a key changed or a new key added
